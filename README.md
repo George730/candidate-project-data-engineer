@@ -15,7 +15,7 @@ We are in the process of migrating legacy databases to AWS. The legacy databases
 * Do your best with the information available. Document assumptions the proceed from there.
 
 ## Bonus Points
-* Provision the project in AWS and provide access to review (AWS Free Tier is helpful here).
+* Provision the project in AWS and provide access to review (AWS Free Tier is helpful here). If your design would go past the free tier you can just note that and leave it as part of the design and not the deployment.
 * Documentation - architecture diagrams,technical specs, etc.
 * Alternative solution to this type of schema and a possible path to migrate it.
 * IaC for the infrastructure necessary to deploy the pipeline.
