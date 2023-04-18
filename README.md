@@ -20,4 +20,4 @@ We are in the process of migrating legacy databases to AWS. The legacy databases
 
 
 ## Credentials
-It is extremely dangerous to include the credentials in a public/private repo. But for review purpose, I include the access keys under cerndential folders.
+It is extremely dangerous to include the credentials in a public/private repo. But for review purpose, I include the access keys under cerndential folders and delete this repo right after the review process.
