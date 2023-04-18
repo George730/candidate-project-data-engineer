@@ -1,0 +1,430 @@
+{
+    "TableCount": "9",
+    "Tables": [
+        {
+            "TableName": "address",
+            "TablePath": "aspen/address/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "street",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                },
+                {
+                    "ColumnName": "city",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "state",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "64",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "zip_code",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "32",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "role_profile_id",
+                    "ColumnType": "INT8"
+                },
+                {
+                    "ColumnName": "address_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "10"
+        },
+        {
+            "TableName": "email_type",
+            "TablePath": "aspen/email_type/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "type",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "email_type_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "6"
+        },
+        {
+            "TableName": "email",
+            "TablePath": "aspen/email/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "value",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "20",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "email_type_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "role_profile_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "email_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "8"
+        },
+        {
+            "TableName": "phone_number_type",
+            "TablePath": "aspen/phone_number_type/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "type",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "phone_number_type_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "6"
+        },
+        {
+            "TableName": "phone_number",
+            "TablePath": "aspen/phone_number/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "phone_number_type_id",
+                    "ColumnType": "INT8"
+                },
+                {
+                    "ColumnName": "role_profile_id",
+                    "ColumnType": "INT8"
+                },
+                {
+                    "ColumnName": "value",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "20",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "phone_number_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "8"
+        },
+        {
+            "TableName": "role_profile_type",
+            "TablePath": "aspen/role_profile_type/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "type",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                },
+                {
+                    "ColumnName": "role_profile_type_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "6"
+        },
+        {
+            "TableName": "role_profile",
+            "TablePath": "aspen/role_profile/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "user_id",
+                    "ColumnType": "INT8"
+                },
+                {
+                    "ColumnName": "role_profile_type_id",
+                    "ColumnType": "INT8"
+                },
+                {
+                    "ColumnName": "role_profile_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "7"
+        },
+        {
+            "TableName": "user_profile",
+            "TablePath": "aspen/user_profile/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "user_profile_id",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "first_name",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "last_name",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "7"
+        },
+        {
+            "TableName": "user",
+            "TablePath": "aspen/user/",
+            "TableOwner": "aspen",
+            "TableColumns": [
+                {
+                    "ColumnName": "user_profile_id",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "user_id",
+                    "ColumnType": "INT8",
+                    "ColumnNullable": "false",
+                    "ColumnIsPk": "true"
+                },
+                {
+                    "ColumnName": "created",
+                    "ColumnType": "DATETIME",
+                    "ColumnNullable": "false",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "created_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128",
+                    "ColumnNullable": "false"
+                },
+                {
+                    "ColumnName": "updated",
+                    "ColumnType": "DATETIME",
+                    "ColumnDateFormat": "YYYY-MM-dd HH:mm:ss"
+                },
+                {
+                    "ColumnName": "updated_by",
+                    "ColumnType": "STRING",
+                    "ColumnLength": "128"
+                }
+            ],
+            "TableColumnsTotal": "6"
+        }        
+    ]
+}
