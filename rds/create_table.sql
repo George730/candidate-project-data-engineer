@@ -16,7 +16,7 @@ create table `address` (
 drop table if exists `email_type`;
 create table `email_type` (
     `type` varchar(128) not null,
-    `email_type_id` int not null;
+    `email_type_id` int not null,
     `created` datetime not null,
     `created_by` varchar(128) not null,
     `updated` datetime,
