@@ -4,22 +4,11 @@ Welcome to Aspen Capital's Data Engineering challenge. This assignment will help
 ## Background
 We are in the process of migrating legacy databases to AWS. The legacy databases are located on prem in a colocation facility. We need to migrate the data in a cost effective way and be able to operate it with a small ops team. We need a pipeline that will sync the data to an AWS data lake and then ETL it into a datastore (e.g RDS, Athena, etc.) to provide the data source for the new applications being built. While the migration is happening the AWS and on prem data need to stay in sync (some delay is allowed. Part of the submission is to decide what delay makes sense).
 
-## Requirements
-### High Level
-* Using the xlsx data file in the data directory of this repository design an ETL process that will match this target data model - https://dbdiagram.io/d/62268eff61d06e6eadbc43bc
-* The solution needs to be provided as design docs, diagrams, and code. Since time is limited, these artifacts will match an exercise and not production scope.
+## Repo Structure
+- The script for AWS Glue job is included under etl/glue_etl.py
+- The json script of database schema is needed for AWS DMS using S3 as data source. It is included in etl/schema.json
+- The design document is included as the design_doc.pdf. Discussions on the technical details, alternatives and trade-offs can be found here.
+- IaC for deploying Glue job and RDS is complex and not saving much time from creating through AWS console and due to limited, it is not included 
 
-## Hints
-* Using native managed AWS services is preferred over a lot of custom code.
-* It is ok to choose any technology you like but you need to justify the choice.
-* Do your best with the information available. Document assumptions the proceed from there.
+## Architure
 
-## Bonus Points
-* Provision the project in AWS and provide access to review (AWS Free Tier is helpful here). If your design would go past the free tier you can just note that and leave it as part of the design and not the deployment.
-* Documentation - architecture diagrams,technical specs, etc.
-* Alternative solution to this type of schema and a possible path to migrate it.
-* IaC for the infrastructure necessary to deploy the pipeline.
-
-## Submission
-* Your submission should be accessible in a public git repository that includes a README.md with all the information you want to include. The expectation is that we can easily follow the steps provided without much leg/guesswork.
-* If your submission does include additional artifacts that are not represented within the repository - the README should provide information on how to retrieve and access these items.
