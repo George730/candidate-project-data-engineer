@@ -1,6 +1,53 @@
-for f in /var/lib/mysql/data/users/*.csv.gz
+for f in ./address/*
 do
-    gunzip -d $f
-    mysql --local-infile=1 -u root -pccccc1234 m3_db -e "SET unique_checks=0; LOAD DATA LOCAL INFILE '${f%.gz}' INTO TABLE users COLUMNS terminated by '\t' LINES TERMINATED BY '\n';"
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE address COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./email/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE email COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./email_type/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE email_type COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./phone_number/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE phone_number COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./phone_number_type/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE phone_number_type COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./role_profile/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE role_profile COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./role_profile_type/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE role_profile_type COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./user/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE user COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
+echo "Done: '"$f"' at $(date)"
+done
+
+for f in ./user_profile/*
+do
+    mysql --local-infile=1 -h dms-sample.cu144p4hztzw.us-east-1.rds.amazonaws.com -P 3306 -u admin -pchangeit aspen -e "LOAD DATA LOCAL INFILE '$f' INTO TABLE user_profile COLUMNS terminated by ',' LINES TERMINATED BY '\n';"
 echo "Done: '"$f"' at $(date)"
 done
