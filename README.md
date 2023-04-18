@@ -12,3 +12,12 @@ We are in the process of migrating legacy databases to AWS. The legacy databases
 
 ## Architure
 ![alt text](arche.drawio.png "Architure Diagram for Data Migration")
+
+- First, we load the raw data .xlsx file into an existing S3 bucket.
+- Than we set up the Glue ETL job, with corresponding crawler and role policies and execute the job. Alternatively, we can interactively run the job through Glue notebook. Create a new notebook and paste the glue_etl.py, finally let it run about 5 min. It will save the processed data into another S3 bucket.
+- Now, we create an RDS Mysql database, and associate it with an EC2 instance as client. After initialization, we first install Mysql community edition on EC2 client through ```yum install mysql```, then we sync the processed data from S3 to EC2 local file system. Finally execute the create_table.sql and load_data.sh.
+- Here, we have the data migrated. Next, we will deploy the data updates synchronization using AWS DMS. 
+
+
+## Credentials
+It is extremely dangerous to include the credentials in a public/private repo. But for review purpose, I include the access keys under cerndential folders.
