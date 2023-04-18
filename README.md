@@ -11,4 +11,4 @@ We are in the process of migrating legacy databases to AWS. The legacy databases
 - IaC for deploying Glue job and RDS is complex and not saving much time from creating through AWS console and due to limited, it is not included 
 
 ## Architure
-
+![alt text](arche.drawio.png "Architure Diagram for Data Migration")
