@@ -1,5 +1,3 @@
-SET SESSION FOREIGN_KEY_CHECKS=0;SET GLOBAL SQL_MODE='ALLOW_INVALID_DATES';
-
 drop table if exists `address`;
 create table `address` (
     `street` varchar(128),
