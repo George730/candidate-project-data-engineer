@@ -1,3 +1,5 @@
+SET SESSION FOREIGN_KEY_CHECKS=0;SET GLOBAL SQL_MODE='ALLOW_INVALID_DATES';
+
 drop table if exists `address`;
 create table `address` (
     `street` varchar(128),
@@ -96,8 +98,8 @@ create table `user_profile` (
 	-- primary key (user_profile_id)
 );
 
-drop table if exists `users`;
-create table `users` (
+drop table if exists `user`;
+create table `user` (
     `user_profile_id` varchar(128) not null,
 	`user_id` int not null,
 	`created` datetime not null,
