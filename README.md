@@ -5,10 +5,10 @@ Welcome to Aspen Capital's Data Engineering challenge. This assignment will help
 We are in the process of migrating legacy databases to AWS. The legacy databases are located on prem in a colocation facility. We need to migrate the data in a cost effective way and be able to operate it with a small ops team. We need a pipeline that will sync the data to an AWS data lake and then ETL it into a datastore (e.g RDS, Athena, etc.) to provide the data source for the new applications being built. While the migration is happening the AWS and on prem data need to stay in sync (some delay is allowed. Part of the submission is to decide what delay makes sense).
 
 ## Repo Structure
-- The script for AWS Glue job is included under etl/glue_etl.py
-- The json script of database schema is needed for AWS DMS using S3 as data source. It is included in etl/schema.json
-- The design document is included as the design_doc.pdf. Discussions on the technical details, alternatives and trade-offs can be found here.
-- IaC for deploying Glue job and RDS is complex and not saving much time from creating through AWS console and due to limited, it is not included 
+- The script for AWS Glue job is included under `etl/glue_etl.py`
+- The json script of database schema is needed for AWS DMS using S3 as data source. It is included in `etl/schema.json`
+- The design document is included as the `design_doc.pdf`. Discussions on the technical details, alternatives and trade-offs can be found here.
+- IaC for deploying s3 and RDS is under `cdk-app folder`
 
 ## Architure
 ![alt text](arche.drawio.png "Architure Diagram for Data Migration")
