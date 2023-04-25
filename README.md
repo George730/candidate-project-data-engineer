@@ -20,4 +20,4 @@ We are in the process of migrating legacy databases to AWS. The legacy databases
 
 
 ## Credentials
-It is extremely dangerous to include the credentials in a public/private repo. So, I did not include it here.
+It is extremely dangerous to expose the credentials in a public/private repo. So, I did not include it here.
