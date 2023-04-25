@@ -1,0 +1,37 @@
+ALTER TABLE email_type ADD PRIMARY KEY(email_type_id);
+ALTER TABLE phone_number_type ADD PRIMARY KEY(phone_number_type_id);
+ALTER TABLE role_profile_type ADD PRIMARY KEY(role_profile_type_id);
+ALTER TABLE user_profile ADD PRIMARY KEY(user_profile_id);
+ALTER TABLE user ADD PRIMARY KEY(user_id);
+ALTER TABLE role_profile ADD PRIMARY KEY(role_profile_id);
+ALTER TABLE address ADD PRIMARY KEY(address_id);
+ALTER TABLE email ADD PRIMARY KEY(email_id);
+ALTER TABLE phone_number ADD PRIMARY KEY(phone_number_id);
+
+ALTER TABLE user add foreign key (user_profile_id) references user_profile (user_profile_id);
+alter table role_profile add foreign key (role_profile_type_id) references role_profile_type (role_profile_type_id);
+alter table role_profile add foreign key (user_id) references user (user_id);
+alter table address add foreign key (role_profile_id) references role_profile (role_profile_id);
+alter table email add foreign key (email_type_id) references email_type (email_type_id);
+alter table email add foreign key (role_profile_id) references role_profile (role_profile_id);
+alter table phone_number add foreign key (phone_number_type_id) references phone_number_type (phone_number_type_id);
+alter table phone_number add foreign key (role_profile_id) references role_profile (role_profile_id);
+
+alter table email_type modify column created timestamp not null default current_timestamp;
+alter table email_type modify column updated timestamp;
+alter table phone_number_type modify column created timestamp not null default current_timestamp;
+alter table phone_number_type modify column updated timestamp;
+alter table role_profile_type modify column created timestamp not null default current_timestamp;
+alter table role_profile_type modify column updated timestamp;
+alter table user_profile modify column created timestamp not null default current_timestamp;
+alter table user_profile modify column updated timestamp;
+alter table address modify column created timestamp not null default current_timestamp;
+alter table address modify column updated timestamp;
+alter table email modify column created timestamp not null default current_timestamp;
+alter table email modify column updated timestamp;
+alter table phone_number modify column created timestamp not null default current_timestamp;
+alter table phone_number modify column updated timestamp;
+alter table user modify column created timestamp not null default current_timestamp;
+alter table user modify column updated timestamp;
+alter table role_profile modify column created timestamp not null default current_timestamp;
+alter table role_profile modify column updated timestamp;
